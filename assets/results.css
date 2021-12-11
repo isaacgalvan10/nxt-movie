@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+}
+
+.streaming-imgs img {
+  height: 80px;
+  width: 80px;
+  margin-right: 20px;
+}
+
+.streaming-imgs .zee5 {
+  height: 60px;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=results.css.map */

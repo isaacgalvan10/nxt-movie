@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NXT MOVIE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/results.css">
+</head>
+<body class="has-background-dark">
+    <nav class="navbar has-background-primary-light	" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <p class="has-text-primary	is-size-4">NXT MOVIE</p>
+        </a>
+      </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="Find movie">
+              </p>
+              <p class="control">
+                <a class="button is-info">
+                  Search
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <main class="section columns">
+      <div class="column is-three-quarters">
+        <div class="box">
+          <h1 id="title" class="title is-2 has-text-centered">Title</h1>
+          <div class="is-flex is-justify-content-center mt-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JfVOs4VSpmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="mt-6">
+            <p>Where to Watch</p>
+            <div class="streaming-imgs">
+              <img src="./assets/imgs/netflix-black.svg" alt="Netflix">
+              <img src="./assets/imgs/prime-black.svg" alt="Prime video">
+              <img src="./assets/imgs/disney-black.svg" alt="Disney Plus">
+              <img src="./assets/imgs/hbo-black.svg" alt="HBO Max">
+              <img src="./assets/imgs/apple-black.svg" alt="Apple TV">
+              <img src="./assets/imgs/mubi-black.svg" alt="Mubi">
+              <img class="zee5" src="./assets/imgs/zee5-black.svg" alt="Zee5">
+              <img src="/assets/imgs/curiosity-black.svg" alt="Curiosity">
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="column">
+        <div class="box">
+          <h3>Watchlist</h3>
+        </div>
+      </aside>
+    </main>
+</body>
+</html>

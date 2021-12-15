@@ -96,3 +96,76 @@ function renderResults (movies) {
     }
 }
 
+function getStreamInfo () {
+    var streamInfoUrl ="https://streaming-availability.p.rapidapi.com/get/basic?country=us&imdb_id="+movieImdbId+"&output_language=en"
+    fetch(streamInfoUrl, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "streaming-availability.p.rapidapi.com",
+		"x-rapidapi-key": "93dfa5bd64msha086c3c4b0428c1p1d3059jsncc3f31a13c79"
+        }
+    })
+    .then(response => {
+        console.log(response);
+        if(response.ok) {
+            response.json()
+            .then(function(data){
+                console.log(data)
+                let movieInfo = data
+                renderMovie(movieInfo)
+            })
+        }
+    })
+    .catch(err => {
+        console.error(err);
+    });
+}
+
+//variables for the results page
+function renderMovie (movie) {
+    let title = movie.title
+    console.log(title)
+    let year = movie.year
+    console.log(year)
+    let poster = movie.posterURLs.original
+    console.log(poster)
+    let overview = movie.overview
+    console.log(overview)
+    let trailer = "https://www.youtube.com/embed/"+movie.video
+    console.log(trailer)
+    let streamInfo = movie.streamingInfo
+    if (streamInfo.hbo) {
+        let hbo = true
+        let hboUrl = streamInfo.hbo.us.link
+        console.log(hbo + " " + hboUrl)
+    }
+    if (streamInfo.netflix) {
+        let netflix = true
+        let netflixUrl = streamInfo.netflix.us.link
+        console.log(netflix + " " + netflixUrl)
+    }
+    if (streamInfo.disney) {
+        let disney = true
+        let disneyUrl = streamInfo.disney.us.link
+        console.log(disney + " " + disneyUrl)
+    }
+    if (streamInfo.prime) {
+        let prime = true
+        let hboUrl = streamInfo.prime.us.link
+        console.log(prime + " " + primeUrl)
+    }
+    if (streamInfo.apple) {
+        let apple = true
+        let appleUrl = streamInfo.apple.us.link
+        console.log(apple + " " + appleUrl)
+    }
+}
+
+
+
+
+function init () {
+    getStreamInfo()
+}
+
+init();

@@ -6,6 +6,7 @@ var movieContainer = document.getElementById("movie-container")
 var searchParameters = document.location.search.split("&")
 var movieImdbId = searchParameters[0].split('=').pop();
 console.log(movieImdbId)
+var navBar = document.getElementsByClassName("navbar")
 
 
 searchButton[0].addEventListener("click", function(event) {
@@ -114,6 +115,23 @@ function getStreamInfo () {
                 let movieInfo = data
                 renderMovie(movieInfo)
             })
+        }else {
+            let notice = document.createElement("div")
+            notice.classList="box"
+            notice.setAttribute("style", "position: absolute; top: 0; left: 0; display: flex; justify-content:space-between; background: red; width:100vw")
+            let noticeText = document.createElement("p")
+            noticeText.setAttribute("style", "text-align: center; padding: 5px; color: white")
+            noticeText.textContent = "There is no streaming information for this movie yet. Search another one!"
+            let noticeButton = document.createElement("button")
+            noticeButton.setAttribute("style", "background: transparent; font-weight: bold; color: white")
+            noticeButton.textContent = "X"
+            noticeButton.classList="button is-small"
+            noticeButton.addEventListener("click", function(event){
+                event.preventDefault();
+                notice.remove();
+            })
+            notice.append(noticeText,noticeButton)
+            navBar[0].append(notice)
         }
     })
     .catch(err => {

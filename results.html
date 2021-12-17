@@ -30,24 +30,24 @@
     <main class="section columns">
       <div class="column is-three-quarters">
         <div class="box">
-          <h1 id="title" class="title is-2 has-text-centered">Title</h1>
+          <h1 id="title" class="title is-2 has-text-centered"></h1>
           <div class="is-flex is-justify-content-center mt-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jaJuwKCmJbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="trailer" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="mt-5">
             <p class="is-size-4 has-text-weight-semibold">Where to Watch</p>
             <div class="streaming-imgs">
-              <img src="./assets/imgs/netflix-white.svg" alt="Netflix" data-active="active" class="active">
-              <img src="./assets/imgs/prime-white.svg" alt="Prime video" data-active="active" class="active">
-              <img src="./assets/imgs/disney-white.svg" alt="Disney Plus" data-active="active" class="active">
-              <img src="./assets/imgs/hbo-white.svg" alt="HBO Max" data-active="active" class="active">
-              <img src="./assets/imgs/apple-white.svg" alt="Apple TV" data-active="active" class="active">
+              <img id="netflix" src="./assets/imgs/netflix-white.svg" alt="Netflix" data-active="false" class="">
+              <img id="prime" src="./assets/imgs/prime-white.svg" alt="Prime video" data-active="false" class="">
+              <img id="disney" src="./assets/imgs/disney-white.svg" alt="Disney Plus" data-active="false" class="">
+              <img id="hbo" src="./assets/imgs/hbo-white.svg" alt="HBO Max" data-active="false" class="">
+              <img id="apple" src="./assets/imgs/apple-white.svg" alt="Apple TV" data-active="false" class="">
             </div>
           </div>
           <div class="mt-2">
-            <p class="title is-5">Year: <span id="year">2021</span></p>
-            <p class="title is-5">Genre: <span id="genre">Action</span></p>
-            <p id="description">When a single mom and her two kids arrive in a small town, they begin to discover their connection to the original Ghostbusters and the secret legacy their grandfather left behind.</p>
+            <p class="title is-5">Year: <span id="year"></span></p>
+            <!-- <p class="title is-5">Genre: <span id="genre"></span></p> -->
+            <p id="overview"></p>
           </div>
         </div>
       </div>

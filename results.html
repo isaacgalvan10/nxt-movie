@@ -6,29 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NXT MOVIE</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/results.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
   integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
-<body class="has-background-dark">
-    <nav class="navbar has-background-primary-light	" role="navigation" aria-label="main navigation">
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <p class="has-text-primary	is-size-4">NXT MOVIE</p>
+          <p class="is-size-4">NXT MOVIE</p>
         </a>
       </div>
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="field is-grouped">
-              <p class="control is-expanded">
-                <input class="input" type="text" placeholder="Find movie">
-              </p>
-              <p class="control">
-                <a class="button is-info">
-                  Search
-                </a>
-              </p>
-            </div>
+            <form class="field has-addons">
+              <input type=text id="user-input" name="user-input" placeholder="Enter your movie" class="input">
+              <button type=submit class="button modal-button" aria-haspopup="true">🔎</button>
+          </form>
           </div>
         </div>
       </div>
@@ -42,30 +37,42 @@
             <button id="list-button" class="fas fa-plus-circle"> </button>          
           </div>
           <div class="is-flex is-justify-content-center mt-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JfVOs4VSpmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="trailer" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="mt-6">
-            <p>Where to Watch</p>
+          <div class="mt-5">
+            <p class="is-size-4 has-text-weight-semibold">Where to Watch</p>
             <div class="streaming-imgs">
-              <img src="./assets/imgs/netflix-black.svg" alt="Netflix">
-              <img src="./assets/imgs/prime-black.svg" alt="Prime video">
-              <img src="./assets/imgs/disney-black.svg" alt="Disney Plus">
-              <img src="./assets/imgs/hbo-black.svg" alt="HBO Max">
-              <img src="./assets/imgs/apple-black.svg" alt="Apple TV">
-              <img src="./assets/imgs/mubi-black.svg" alt="Mubi">
-              <img class="zee5" src="./assets/imgs/zee5-black.svg" alt="Zee5">
-              <img src="/assets/imgs/curiosity-black.svg" alt="Curiosity">
+              <img id="netflix" src="./assets/imgs/netflix-white.svg" alt="Netflix" data-active="false" class="">
+              <img id="prime" src="./assets/imgs/prime-white.svg" alt="Prime video" data-active="false" class="">
+              <img id="disney" src="./assets/imgs/disney-white.svg" alt="Disney Plus" data-active="false" class="">
+              <img id="hbo" src="./assets/imgs/hbo-white.svg" alt="HBO Max" data-active="false" class="">
+              <img id="apple" src="./assets/imgs/apple-white.svg" alt="Apple TV" data-active="false" class="">
             </div>
+          </div>
+          <div class="mt-2">
+            <p class="title is-5">Year: <span id="year"></span></p>
+            <!-- <p class="title is-5">Genre: <span id="genre"></span></p> -->
+            <p id="overview"></p>
           </div>
         </div>
       </div>
       <aside class="column">
         <div class="box">
-          <h3>Watchlist</h3>
+          <p>Watchlist</p>
           <ul id="watch-list"></ul>
         </div>
       </aside>
     </main>
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box" id="movie-container">
+        <!--Here goes the movies-->
+       </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
     <script src="./assets/results.js"></script>
+    <script src="./assets/search2.js"></script>
 </body>
 </html>

@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/results.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -30,7 +32,10 @@
     <main class="section columns">
       <div class="column is-three-quarters">
         <div class="box">
-          <h1 id="title" class="title is-2 has-text-centered"></h1>
+          <div id="maintitle" class="is-flex is-justify-content-center is-align-content-center">
+            <h1 id="title" class="title is-2 has-text-centered">Title</h1> 
+            <button id="list-button" class="fas fa-plus-circle"> </button>          
+          </div>
           <div class="is-flex is-justify-content-center mt-6">
             <iframe id="trailer" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -54,6 +59,7 @@
       <aside class="column">
         <div class="box">
           <p>Watchlist</p>
+          <ul id="watch-list"></ul>
         </div>
       </aside>
     </main>
@@ -66,6 +72,7 @@
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
     </div>
+    <script src="./assets/results.js"></script>
     <script src="./assets/search2.js"></script>
 </body>
 </html>

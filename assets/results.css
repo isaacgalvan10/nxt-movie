@@ -12,4 +12,15 @@ body {
   height: 60px;
   margin-bottom: 10px;
 }
+
+#list-button {
+  display: flex;
+  background-color: rgb(178, 178, 184);
+  border-radius: 15px;
+  height: 20px;
+}
+#watch-list {
+  overflow: auto;
+  height: 500px;
+}
 /*# sourceMappingURL=results.css.map */

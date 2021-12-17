@@ -7,6 +7,8 @@
   <title>NXT MOVIE</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/results.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body class="has-background-dark">
     <nav class="navbar has-background-primary-light	" role="navigation" aria-label="main navigation">
@@ -35,7 +37,10 @@
     <main class="section columns">
       <div class="column is-three-quarters">
         <div class="box">
-          <h1 id="title" class="title is-2 has-text-centered">Title</h1>
+          <div id="maintitle" class="is-flex is-justify-content-center is-align-content-center">
+            <h1 id="title" class="title is-2 has-text-centered">Title</h1> 
+            <button id="list-button" class="fas fa-plus-circle"> </button>          
+          </div>
           <div class="is-flex is-justify-content-center mt-6">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/JfVOs4VSpmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -57,8 +62,10 @@
       <aside class="column">
         <div class="box">
           <h3>Watchlist</h3>
+          <ul id="watch-list"></ul>
         </div>
       </aside>
     </main>
+    <script src="./assets/results.js"></script>
 </body>
 </html>

@@ -6,7 +6,16 @@ var movieContainer = document.getElementById("movie-container")
 var searchParameters = document.location.search.split("&")
 var movieImdbId = searchParameters[0].split('=').pop();
 console.log(movieImdbId)
-var navBar = document.getElementsByClassName("navbar")
+var navBar = document.getElementsByClassName("navbar");
+var movieTitleEl = document.getElementById('title');
+var yearEl = document.getElementById('year');
+var overviewEl = document.getElementById('overview');
+var trailerSrc = document.getElementById('trailer');
+var netflixImg = document.getElementById('netflix');
+var primeImg = document.getElementById('prime');
+var disneyImg = document.getElementById('disney');
+var hboImg = document.getElementById('hbo');
+var appleImg = document.getElementById('apple');
 
 
 searchButton[0].addEventListener("click", function(event) {
@@ -143,36 +152,51 @@ function getStreamInfo () {
 function renderMovie (movie) {
     let title = movie.title
     console.log(title)
+    movieTitleEl.innerText = title;
     let year = movie.year
+    yearEl.innerText = year;
     console.log(year)
     let poster = movie.posterURLs.original
     console.log(poster)
     let overview = movie.overview
+    overviewEl.innerText = overview;
     console.log(overview)
-    let trailer = "https://www.youtube.com/embed/"+movie.video
+    let trailer = "https://www.youtube.com/embed/"+movie.video;
+    trailerSrc.setAttribute('src', trailer);
+    console.log(trailerSrc);
     console.log(trailer)
     let streamInfo = movie.streamingInfo
     if (streamInfo.hbo) {
+        hboImg.dataset.active = 'true';
+        hboImg.classList.add('active');
         let hbo = true
         let hboUrl = streamInfo.hbo.us.link
         console.log(hbo + " " + hboUrl)
     }
     if (streamInfo.netflix) {
+        netflixImg.dataset.active = 'true';
+        netflixImg.classList.add('active');
         let netflix = true
         let netflixUrl = streamInfo.netflix.us.link
         console.log(netflix + " " + netflixUrl)
     }
     if (streamInfo.disney) {
+        disneyImg.dataset.active = 'true';
+        disneyImg.classList.add('active');
         let disney = true
         let disneyUrl = streamInfo.disney.us.link
         console.log(disney + " " + disneyUrl)
     }
     if (streamInfo.prime) {
+        primeImg.dataset.active = 'true';
+        primeImg.classList.add('active');
         let prime = true
-        let hboUrl = streamInfo.prime.us.link
+        let primeUrl = streamInfo.prime.us.link
         console.log(prime + " " + primeUrl)
     }
     if (streamInfo.apple) {
+        appleImg.dataset.active = 'true';
+        appleImg.classList.add('active');
         let apple = true
         let appleUrl = streamInfo.apple.us.link
         console.log(apple + " " + appleUrl)

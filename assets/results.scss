@@ -4,14 +4,19 @@ $dark-blue: #04293A;
 $blue: #064663;
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: $navy;
+  overflow-x: hidden;
 }
 
 p {
   font-size: 20px;
   color: white;
+}
+
+main {
+  margin-bottom: 0!important;
 }
 
 .navbar {
@@ -63,4 +68,6 @@ p {
   margin-left: 10px;
   border: none;
   background-color: $accent;
+  padding: 7px 6px;
+  cursor: pointer;
 }

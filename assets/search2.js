@@ -18,6 +18,11 @@ var hboImg = document.getElementById('hbo');
 var appleImg = document.getElementById('apple');
 var title = ""
 var poster = ""
+var netflixUrl = document.getElementById('netflix-url');
+var primeUrl = document.getElementById('prime-url');
+var disneyUrl = document.getElementById('disney-url');
+var hboUrl = document.getElementById('hbo-url');
+var appleUrl = document.getElementById('apple-url');
 
 
 
@@ -155,55 +160,39 @@ function getStreamInfo () {
 //variables for the results page
 function renderMovie (movie) {
     title = movie.title
-    console.log(title)
     movieTitleEl.innerText = title;
     let year = movie.year
     yearEl.innerText = year;
-    console.log(year)
     poster = movie.posterURLs.original
-    console.log(poster)
     let overview = movie.overview
     overviewEl.innerText = overview;
-    console.log(overview)
     let trailer = "https://www.youtube.com/embed/"+movie.video;
     trailerSrc.setAttribute('src', trailer);
-    console.log(trailerSrc);
-    console.log(trailer)
     let streamInfo = movie.streamingInfo
     if (streamInfo.hbo) {
         hboImg.dataset.active = 'true';
         hboImg.classList.add('active');
-        let hbo = true
-        let hboUrl = streamInfo.hbo.us.link
-        console.log(hbo + " " + hboUrl)
+        hboUrl.href = streamInfo.hbo.us.link;
     }
     if (streamInfo.netflix) {
         netflixImg.dataset.active = 'true';
         netflixImg.classList.add('active');
-        let netflix = true
-        let netflixUrl = streamInfo.netflix.us.link
-        console.log(netflix + " " + netflixUrl)
+        netflixUrl.href = streamInfo.netflix.us.link;
     }
     if (streamInfo.disney) {
         disneyImg.dataset.active = 'true';
         disneyImg.classList.add('active');
-        let disney = true
-        let disneyUrl = streamInfo.disney.us.link
-        console.log(disney + " " + disneyUrl)
+        disneyUrl.href = streamInfo.disney.us.link;
     }
     if (streamInfo.prime) {
         primeImg.dataset.active = 'true';
         primeImg.classList.add('active');
-        let prime = true
-        let primeUrl = streamInfo.prime.us.link
-        console.log(prime + " " + primeUrl)
+        primeUrl.href = streamInfo.prime.us.link;
     }
     if (streamInfo.apple) {
         appleImg.dataset.active = 'true';
         appleImg.classList.add('active');
-        let apple = true
-        let appleUrl = streamInfo.apple.us.link
-        console.log(apple + " " + appleUrl)
+        appleUrl.href = streamInfo.apple.us.link;
     }
 }
 

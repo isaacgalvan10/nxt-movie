@@ -16,6 +16,9 @@ var primeImg = document.getElementById('prime');
 var disneyImg = document.getElementById('disney');
 var hboImg = document.getElementById('hbo');
 var appleImg = document.getElementById('apple');
+var title = ""
+var poster = ""
+
 
 
 searchButton[0].addEventListener("click", function(event) {
@@ -50,6 +53,7 @@ var movieButtonHandler = function (event) {
 function getMovies(movie) {
 
     if (!movie) {
+        movieContainer.setAttribute("style", "color:white")
         movieContainer.textContent="Please enter a movie name"
         return
     }
@@ -112,7 +116,7 @@ function getStreamInfo () {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "streaming-availability.p.rapidapi.com",
-		"x-rapidapi-key": "93dfa5bd64msha086c3c4b0428c1p1d3059jsncc3f31a13c79"
+		"x-rapidapi-key": '49a7225357msh5d97bdd7b42a7c0p1dafe7jsn0ed0d8594b5c'
         }
     })
     .then(response => {
@@ -150,13 +154,13 @@ function getStreamInfo () {
 
 //variables for the results page
 function renderMovie (movie) {
-    let title = movie.title
+    title = movie.title
     console.log(title)
     movieTitleEl.innerText = title;
     let year = movie.year
     yearEl.innerText = year;
     console.log(year)
-    let poster = movie.posterURLs.original
+    poster = movie.posterURLs.original
     console.log(poster)
     let overview = movie.overview
     overviewEl.innerText = overview;

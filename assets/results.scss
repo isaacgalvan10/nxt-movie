@@ -37,6 +37,7 @@ p {
 
 .title {
   color: white;
+  margin-bottom: 0 !important;
 }
 
 
@@ -54,4 +55,12 @@ p {
   .active {
     opacity: 1;
   }
+}
+
+#list-button {
+  border-radius: 50%;
+  height: 25px;
+  margin-left: 10px;
+  border: none;
+  background-color: $accent;
 }

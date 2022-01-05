@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NXT MOVIE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/results.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <p class="is-size-4">NXT MOVIE</p>
+        </a>
+      </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <form class="field has-addons">
+              <input type=text id="user-input" name="user-input" placeholder="Enter your movie" class="input">
+              <button type=submit class="button modal-button" aria-haspopup="true">🔎</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <main class="section columns">
+      <div class="column is-three-quarters">
+        <div class="box">
+          <div id="maintitle" class="is-flex is-justify-content-center is-align-items-center">
+            <h1 id="title" class="title is-2 has-text-centered">Title</h1> 
+            <button id="list-button" class="fas fa-plus-circle"> </button>          
+          </div>
+          <div class="is-flex is-justify-content-center mt-6">
+            <iframe id="trailer" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="mt-5">
+            <p class="is-size-4 has-text-weight-semibold">Where to Watch</p>
+            <div class="streaming-imgs">
+              <img id="netflix" src="./assets/imgs/netflix-white.svg" alt="Netflix" data-active="false" class="">
+              <img id="prime" src="./assets/imgs/prime-white.svg" alt="Prime video" data-active="false" class="">
+              <img id="disney" src="./assets/imgs/disney-white.svg" alt="Disney Plus" data-active="false" class="">
+              <img id="hbo" src="./assets/imgs/hbo-white.svg" alt="HBO Max" data-active="false" class="">
+              <img id="apple" src="./assets/imgs/apple-white.svg" alt="Apple TV" data-active="false" class="">
+            </div>
+          </div>
+          <div class="mt-2">
+            <p class="title is-5">Year: <span id="year"></span></p>
+            <!-- <p class="title is-5">Genre: <span id="genre"></span></p> -->
+            <p id="overview"></p>
+          </div>
+        </div>
+      </div>
+      <aside class="column">
+        <div class="box">
+          <p>Watchlist</p>
+          <ul id="watch-list"></ul>
+        </div>
+      </aside>
+    </main>
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box" id="movie-container">
+        <!--Here goes the movies-->
+       </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <script src="./assets/results.js"></script>
+    <script src="./assets/search2.js"></script>
+</body>
+</html>

@@ -5,7 +5,6 @@ var userInput = document.getElementById("user-input")
 var movieContainer = document.getElementById("movie-container")
 var searchParameters = document.location.search.split("&")
 var movieImdbId = searchParameters[0].split('=').pop();
-console.log(movieImdbId)
 var navBar = document.getElementsByClassName("navbar");
 var movieTitleEl = document.getElementById('title');
 var yearEl = document.getElementById('year');
@@ -121,9 +120,9 @@ function getStreamInfo () {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "streaming-availability.p.rapidapi.com",
-		"x-rapidapi-key": '49a7225357msh5d97bdd7b42a7c0p1dafe7jsn0ed0d8594b5c'
-        }
-    })
+		"x-rapidapi-key": '93dfa5bd64msha086c3c4b0428c1p1d3059jsncc3f31a13c79'
+	}
+})
     .then(response => {
         console.log(response);
         if(response.ok) {

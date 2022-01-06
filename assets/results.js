@@ -29,16 +29,15 @@ function renderTodos() {
 
     li.append(pos,tex,button);
     watchList.appendChild(li);
-    
-
     }
- 
-    console.log(movielist);
 
     storeWatchlist();
 
 }
+
+//add movie to the watchlist
 function pushMovie (){
+    let x = 0
     var movieInfo = {
         movieTitle:"",
         movieUrl:"",
@@ -46,49 +45,53 @@ function pushMovie (){
     }
     movieInfo.movieTitle = title
     movieInfo.movieUrl = "./results.html?q="+movieImdbId
-    console.log(movieInfo.movieUrl)
     movieInfo.moviePoster = poster
 
-    movielist.push(movieInfo);
+    for (let  i= 0; i < movielist.length; i++) {
+        if (movielist[i].movieTitle==title) {
+            x = 1
+        }
+    }
+    console.log(x)
+    if (x == 0){
+        console.log("working")
+        movielist.push(movieInfo);
+    }
    
     renderTodos();
 }
 
+//init function to get local storage and render watchlist at load
 
 function init() {
     var storedWatchList = JSON.parse(localStorage.getItem("watch-list"));
     if (storedWatchList !== null) {
         movielist = storedWatchList;
-        console.log(watchList)
-
     renderTodos();
-
-    
-    
     }
 }
 
+//save watchlist to locak storage
+
 function storeWatchlist() {
-    console.log("storeWatchlist")
     window.localStorage.setItem("watch-list", JSON.stringify(movielist))
 }
 
 
 init();
 
+//button to add movie to watchlist
+
 watchListButton.addEventListener("click", pushMovie)
+
+//button to delete movie from watchlist
 
 watchList.addEventListener("click", function(event) {
     var element = event.target;
-    console.log(element);
-    // Checks if element is a button
     if (element.matches("button") === true) {
-      // Get its data-index value and remove the todo element from the list
-      var index = element.parentElement.getAttribute("data-index");
+      var index = element.getAttribute("data-index");
+      console.log(index)
       movielist.splice(index, 1);
-
-  
-      // Store updated todos in localStorage, re-render the list
       storeWatchlist();
       renderTodos();
     }

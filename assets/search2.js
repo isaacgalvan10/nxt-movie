@@ -99,7 +99,7 @@ function renderResults (movies) {
             
             var movieImage = document.createElement("img")
             movieImage.setAttribute("src",movies[i].i.imageUrl)
-            movieImage.setAttribute("style", "max-width: 50px; height:auto; display:inline-block")
+            movieImage.setAttribute("style", "height:auto; display:inline-block;")
             var movieItem = document.createElement("p")
             movieItem.textContent = movies[i].l+" Year: "+ movies[i].y
             movieItem.setAttribute("data-index", movies[i].id)
@@ -137,12 +137,12 @@ function getStreamInfo () {
             notice.classList="box"
             notice.setAttribute("style", "position: absolute; top: 0; left: 0; display: flex; justify-content:space-between; background: red; width:100vw")
             let noticeText = document.createElement("p")
-            noticeText.setAttribute("style", "text-align: center; padding: 5px; color: white")
+            noticeText.setAttribute("style", "text-align: center; padding: 10px 0 0 5px; color: white")
             noticeText.textContent = "There is no streaming information for this movie yet. Search another one!"
             let noticeButton = document.createElement("button")
             noticeButton.setAttribute("style", "background: transparent; font-weight: bold; color: white")
             noticeButton.textContent = "X"
-            noticeButton.classList="button is-small"
+            noticeButton.classList="button is-medium"
             noticeButton.addEventListener("click", function(event){
                 event.preventDefault();
                 notice.remove();

@@ -40,6 +40,23 @@ main {
   }
 }
 
+#movie-container {
+  div {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 80px;
+    cursor: pointer;
+  }
+
+  p {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+}
+
 .title {
   color: white;
   margin-bottom: 0 !important;

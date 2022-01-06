@@ -37,6 +37,23 @@ main {
   background-color: #041C32;
 }
 
+#movie-container div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+#movie-container img {
+  width: 80px;
+  cursor: pointer;
+}
+
+#movie-container p {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
 .title {
   color: white;
   margin-bottom: 0 !important;

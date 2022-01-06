@@ -7,19 +7,51 @@
   <link rel="stylesheet" href="/Users/andresballi/Desktop/nxt-movie/assets/styles.scss">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <title>NXT MOVIE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/results.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+​
 </head>
 <body class="a">
- <div class="home-page">
-  <div class="header">
-    <h1>NXT-MOVIE</h1>
+  <header class="navbar">
+ 
+        <p class="is-size-1 has-text-centered" style="display: block; margin:auto; cursor: context-menu">NXT MOVIE</p>
+        
+​
+​
+  </header>
+​
+  <main class="section columns">
+    <div class="column is-three-quarters">
+      <div class="box">
+        <form class="field has-addons">
+          <input type=text id="user-input" name="user-input" placeholder="Enter your movie" class="input">
+          <button type=submit class="button modal-button" aria-haspopup="true">🔎</button>
+      </form>
+      </div>
+    </div>
+    <aside class="column">
+      <div class="box">
+
+        <p>Watchlist</p>
+        <ul id="watch-list"></ul>
+      </div>
+    </aside>
+  </main>
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box" id="movie-container" style="color:white" style="margin-top: 200px;">
+      <!--Here goes the movies-->
+      
+     </div>
+     <button class="modal-close is-large" aria-label="close" style="background-color: #064663; position: absolute; top:0; right: 0;"></button>
+    </div>
+    
   </div>
-  <form>
-    <form class="search-container">
-      <input type="text" id="search-bar" placeholder="What can I help you with today?">
-      <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
-    </form>
-  </form>
-  </div>
- </div>
+  <script src="./assets/results.js"></script>
+  <script src="./assets/search.js"></script>
 </body>
 </html>

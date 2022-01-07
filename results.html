@@ -14,14 +14,14 @@
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
+        <a class="navbar-item" href="/index.html">
           <p class="is-size-4">NXT MOVIE</p>
         </a>
       </div>
         <div class="navbar-end">
           <div class="navbar-item">
             <form class="field has-addons">
-              <input type=text id="user-input" name="user-input" placeholder="Enter your movie" class="input">
+              <input type=text id="user-input" name="user-input" placeholder="Enter movie title" class="input">
               <button type=submit class="button modal-button" aria-haspopup="true">🔎</button>
           </form>
           </div>
@@ -51,7 +51,6 @@
           </div>
           <div class="mt-2">
             <p class="title is-5">Year: <span id="year"></span></p>
-            <!-- <p class="title is-5">Genre: <span id="genre"></span></p> -->
             <p id="overview"></p>
           </div>
         </div>
@@ -69,8 +68,8 @@
         <div class="box" id="movie-container" style="color:white">
         <!--Here goes the movies-->
        </div>
+       <button class="modal-close is-large" aria-label="close" style="background-color: #064663; position: absolute; top:0; right: 0;"></button>
       </div>
-      <button class="modal-close is-large" aria-label="close"></button>
     </div>
     <script src="./assets/results.js"></script>
     <script src="./assets/search2.js"></script>

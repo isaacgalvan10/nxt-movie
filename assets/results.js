@@ -81,8 +81,9 @@ function storeWatchlist() {
 init();
 
 //button to add movie to watchlist
-
+if (watchListButton) {
 watchListButton.addEventListener("click", pushMovie)
+}
 
 //button to delete movie from watchlist
 

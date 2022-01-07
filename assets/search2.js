@@ -120,7 +120,7 @@ function getStreamInfo () {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "streaming-availability.p.rapidapi.com",
-		"x-rapidapi-key": '93dfa5bd64msha086c3c4b0428c1p1d3059jsncc3f31a13c79'
+		"x-rapidapi-key": 'f2b831f1camshd19bd8cd34a5169p194954jsn6eeab80e7886'
 	}
 })
     .then(response => {

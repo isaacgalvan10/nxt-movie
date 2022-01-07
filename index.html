@@ -4,37 +4,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/Users/andresballi/Desktop/nxt-movie/assets/styles.scss">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <title>NXT MOVIE</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/results.css">
+  <link rel="stylesheet" href="./assets/styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
   integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-​
 </head>
-<body class="a">
+<body>
   <header class="navbar">
- 
-        <p class="is-size-1 has-text-centered" style="display: block; margin:auto; cursor: context-menu">NXT MOVIE</p>
-        
-​
-​
+    <h1 class="is-size-1" >NXT MOVIE</h1>
   </header>
-​
   <main class="section columns">
     <div class="column is-three-quarters">
       <div class="box">
         <form class="field has-addons">
-          <input type=text id="user-input" name="user-input" placeholder="Enter your movie" class="input">
+          <input type=text id="user-input" name="user-input" placeholder="Enter movie title" class="input">
           <button type=submit class="button modal-button" aria-haspopup="true">🔎</button>
       </form>
       </div>
     </div>
     <aside class="column">
       <div class="box">
-
         <p>Watchlist</p>
         <ul id="watch-list"></ul>
       </div>
@@ -49,7 +40,6 @@
      </div>
      <button class="modal-close is-large" aria-label="close" style="background-color: #064663; position: absolute; top:0; right: 0;"></button>
     </div>
-    
   </div>
   <script src="./assets/results.js"></script>
   <script src="./assets/search.js"></script>

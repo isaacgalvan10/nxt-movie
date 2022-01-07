@@ -52,7 +52,6 @@ main {
 
   img {
     width: 80px;
-    cursor: pointer;
   }
 
   p {
@@ -69,7 +68,10 @@ main {
 
 .box {
   background-color: $blue;
-  margin-top: 10%;
+  
+  .is-5 {
+    padding-bottom: 15px;
+  }
 }
 
 .streaming-imgs {

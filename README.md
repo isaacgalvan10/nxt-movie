@@ -29,7 +29,7 @@ Finally, a working application was debugged, checked and finally deployed.
 
  [Final Product:Github repository](https://github.com/isaacgalvan10/nxt-movie)
 
- [Final Product:Code Quiz](https://isaacgalvan10.github.io/nxt-movie/)
+ [Final Product:Nxt movie](https://isaacgalvan10.github.io/nxt-movie/)
 
 [Document Presentation](https://onedrive.live.com/view.aspx?resid=124BCA53E6F59F19!82298&ithint=file%2cpptx&authkey=!AHVscf0fYc7J3lQ)
 
